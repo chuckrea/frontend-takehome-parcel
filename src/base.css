@@ -76,16 +76,30 @@ input {
   padding: 1em 20px 0;
 }
 
-.list > div {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  font: 20px 'Open Sans', sans-serif;
-  border: solid 1px;
-  margin-bottom: .5em;
-  border-radius: 20px;
+.list:before {
+  content: ' ';
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   position: relative;
+  float: right;
+  margin: 0 5px 5px 0;
+}
+
+.list.display-list:before {
+  content: 'Saved';
+}
+
+.list > div {
+  border: solid 1px;
+  border-radius: 20px;
+  clear: both;
+  display: flex;
+  font: 20px 'Open Sans', sans-serif;
+  justify-content: space-between;
   left: 0;
+  margin-bottom: .5em;
+  padding: 10px;
+  position: relative;
   top: 0;
   transition: left 1s, top .3s;
 }
