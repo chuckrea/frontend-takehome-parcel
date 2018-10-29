@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Orbitron:700');
+
 body {
   background: #eee;
   font-family: Georgia;
@@ -5,9 +7,120 @@ body {
   padding: 50px;
 }
 
+body > div {
+  width: 65%;
+  max-width: 750px;
+  margin: 1em auto;
+}
+
+.input {
+  text-align: center;
+}
+
 .big-lorem-ipsum {
+  font-family: 'Orbitron', sans-serif;
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 700;
   margin: 0 auto;
-  max-width: 15em;
+  width: 90%;
+  text-align: center;
+  color: red;
+}
+
+.input {
+  margin-bottom: 1em;
+}
+
+input {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+
+.tabs div {
+  border: 1px solid;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabs .loading {
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+}
+
+.loading {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.tabs div.active {
+  background-color: #ccc;
+}
+
+.list {
+  border-top: 1px solid;
+  height: 55vh;
+  overflow: auto;
+  padding: 1em 20px 0;
+}
+
+.list > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font: 20px 'Open Sans', sans-serif;
+  border: solid 1px;
+  margin-bottom: .5em;
+  border-radius: 20px;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: left 1s, top .3s;
+}
+
+.list > div.transitioned {
+  transition: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.list a:hover {
+  opacity: 0.7;
+}
+
+.favorite-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.favorite-button:before {
+  content: '\f3a5';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 500;
+  display: block;
+}
+
+.favorite-button.favorite:before {
+  font-weight: 900;
+  color: red;
+}
+
+.hidden {
+  display: none !important; 
 }

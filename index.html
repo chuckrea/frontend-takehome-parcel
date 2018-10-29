@@ -3,8 +3,25 @@
 <head>
   <title>Ruby Gems search app</title>
   <link rel="stylesheet" href="./src/base.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
-  <h1 class="big-lorem-ipsum">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor...</h1>
+  <h1 class="big-lorem-ipsum">GemHunter 2000!</h1>
+  <div class="input">
+    <input oninput="domController.onInputChange()" placeholder="Search for gems...">
+  </div>
+  <div>
+    <div class="tabs">
+      <div class="tab--search active" onclick="domController.showSearch(this)">Search</div>
+      <div class="loading hidden">Loading...</div>
+      <div class="tab--favorites" onclick="domController.showFavorites(this)">Show Favorites</div>
+    </div>
+    <div class="list">
+      <div class="loading hidden">Loading...</div>
+    </div>
+  </div>
 </body>
+<script src="./src/js/main.js"></script>
+<script>
+</script>
 </html>
